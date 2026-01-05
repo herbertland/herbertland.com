@@ -1,0 +1,24 @@
+#######################################################################
+#                         Email Variables                             #
+#######################################################################
+
+should_i_mail			yes
+email_subject			Order Form Data
+email_of_receiver		postmaster
+receiver_language		ja
+
+#######################################################################
+#                  Database Variables                                 #
+#######################################################################
+
+should_i_append_database	yes
+location_of_database		form/order_ja.data
+database_delimiter		,
+
+#######################################################################
+#                  Thankyou stuff                                     #
+#######################################################################
+
+thankyou_reply_html		form/thankyou_ja.html
+sorry_reply_html		form/sorry_ja.html
+

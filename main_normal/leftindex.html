@@ -1,0 +1,90 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; I; SunOS 5.8 sun4u) [Netscape]">
+   <title>Herbertland Home</title>
+</head>
+<body text="#000000" bgcolor="#5F9EA0" link="#FFCC33" vlink="#FFCC99" alink="#FF0000" background="http://www.herbertland.com/menu/slice.jpg">
+<img src="http://www.herbertland.com/menu/logo.gif" border=0>
+<br>
+<table cellspacing=0 cellpadding=0>
+<tr>
+<td>
+<a href="http://www.herbertland.com/main_normal/detail.html" target="detail" onMouseOver="setsign('home')" onMouseOut="outsign('home')"><img SRC="http://www.herbertland.com/menu/home.gif" border=0></a> 
+</td>
+<td>
+<img name="home_timg" src="http://www.herbertland.com/menu/null_target.gif">
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://www.herbertland.com/Amelia" target="detail" onMouseOver="setsign('acorner')" onMouseOut="outsign('acorner')"><img SRC="http://www.herbertland.com/menu/amelias_corner.gif" border=0></a> 
+</td>
+<td>
+<img name="acorner_timg" src="http://www.herbertland.com/menu/null_target.gif">
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://www.herbertland.com/Andrew" target="detail" onMouseOver="setsign('aworld')" onMouseOut="outsign('aworld')"><img SRC="http://www.herbertland.com/menu/andrews_world.gif" border=0></a> 
+</td>
+<td>
+<img name="aworld_timg" src="http://www.herbertland.com/menu/null_target.gif">
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://www.herbertland.com/depts/links.html" target="detail" onMouseOver="setsign('departments')" onMouseOut="outsign('departments')"><img SRC="http://www.herbertland.com/menu/departments.gif" border=0></a> 
+</td>
+<td>
+<img name="departments_timg" src="http://www.herbertland.com/menu/null_target.gif">
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://www.mcinet.com" target="detail" onMouseOver="setsign('mcinet')" onMouseOut="outsign('mcinet')"><img SRC="http://www.herbertland.com/menu/mcinet.gif" border=0></a> 
+</td>
+<td>
+<img name="mcinet_timg" src="http://www.herbertland.com/menu/null_target.gif">
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://www.herbertland.com/depts/contact.html" target="detail" onMouseOver="setsign('contact')" onMouseOut="outsign('contact')"><img SRC="http://www.herbertland.com/menu/contact_us.gif" border=0></a> 
+</td>
+<td>
+<img name="contact_timg" src="http://www.herbertland.com/menu/null_target.gif">
+</td>
+</tr>
+</table>
+
+<script LANGUAGE="JavaScript1.2">
+
+current_main = "";
+current_text = "";
+
+function set_detail(name)
+{
+	top.detail.location = name;
+}
+
+function outsign(name) {
+	document[name + "_timg"].src =
+		"http://www.herbertland.com/menu/null_target.gif";
+	if (parent.detail.outsign) {
+		parent.detail.outsign(name);
+	}
+}
+
+function setsign(name) {
+	document[name + "_timg"].src =
+		"http://www.herbertland.com/menu/target.gif";
+	if (parent.detail.setsign) {
+		parent.detail.setsign(name);
+	}
+}
+
+</script>
+</body>
+</html>

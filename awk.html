@@ -1,0 +1,133 @@
+<html>
+<head><title>Awk</head></title>
+
+<body bgcolor=cadetblue>
+<script LANGUAGE="JavaScript1.2">
+moveFlakePeriod = 100;
+
+movePeriod = 200;
+numImg= 15;
+width= 100;
+height= 90;
+pos_x= 0;
+pos_y= 100;
+current= 0;
+step= 15;
+
+nameA= new Array(numImg);
+heightA= new Array(numImg);
+
+heightA[0]= 79;
+heightA[1]= 81;
+heightA[2]= 84;
+heightA[3]= 85;
+heightA[4]= 86;
+heightA[5]= 84;
+heightA[6]= 78;
+heightA[7]= 74;
+heightA[8]= 73;
+heightA[9]= 80;
+heightA[10]= 82;
+heightA[11]= 81;
+heightA[12]= 78;
+heightA[13]= 74;
+heightA[14]= 73;
+
+wait= 0;
+once= 0;
+function moveDiv() {
+    if (wait) {
+	wait--;
+	return;
+    }
+    obj= document.all[nameA[current]];
+    obj.visibility= "hidden";
+    current= (current + 1) % numImg;
+
+    pos_x+= step;
+    if (pos_x > window.innerWidth){
+	 wait= Math.round((Math.random() * 20 + 10) * (1000 / movePeriod))
+       pos_x= -width;
+	 return;
+    }
+    obj= document.all[nameA[current]];
+    obj.top= window.innerHeight - heightA[current];
+    obj.left= pos_x;
+    obj.visibility= "visible";
+}
+
+function moveImage() {
+	if(!document.all) document.all = document;
+	max_x= window.innerWidth;
+	pos_y= window.innerHeight - height;
+	pos_x= -width;
+	for (i= 0; i < numImg; i++) {
+	  if (i < 10) {
+	      nameA[i]= new String("img0" + i);
+	  } else {
+	      nameA[i]= new String("img" + i);
+	  }
+	  obj= document.all[nameA[i]];
+	  obj.visibility= "hidden";
+	}
+ 	setInterval("moveDiv()",movePeriod);
+}
+
+	
+function moveAllImage() {
+	moveImage();
+}
+
+window.onload = moveAllImage;
+//-->
+</script>
+<!-- INSET DHTML CODING -->
+<div ID="img00" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk01c.gif" BORDER=0 ></div>
+
+<div ID="img01" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk03c.gif" BORDER=0 ></div>
+
+<div ID="img02" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk05c.gif" BORDER=0 ></div>
+
+<div ID="img03" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk08c.gif" BORDER=0 ></div>
+
+<div ID="img04" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk10c.gif" BORDER=0 ></div>
+
+<div ID="img05" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk12c.gif" BORDER=0 ></div>
+
+<div ID="img06" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk14c.gif" BORDER=0 ></div>
+
+<div ID="img07" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk16c.gif" BORDER=0 ></div>
+
+<div ID="img08" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk18c.gif" BORDER=0 ></div>
+
+<div ID="img09" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk20c.gif" BORDER=0 ></div>
+
+<div ID="img10" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk22c.gif" BORDER=0 ></div>
+
+<div ID="img11" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk24c.gif" BORDER=0 ></div>
+
+<div ID="img12" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk26c.gif" BORDER=0 ></div>
+
+<div ID="img13" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk28c.gif" BORDER=0 ></div>
+
+<div ID="img14" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awks/awk30c.gif" BORDER=0 ></div>
+
+<center><!-- END DHTML CODING --></center>
+
+</body>
+</html>

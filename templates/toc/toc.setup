@@ -1,0 +1,7 @@
+##################################################
+#The current variable you can set is
+#toc_viewable
+#(allow user to view it. default to yes)
+# make sure "no" or "yes" is  followed by new line 
+##################################################
+toc_viewable			yes

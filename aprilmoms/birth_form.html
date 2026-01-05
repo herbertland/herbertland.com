@@ -1,0 +1,241 @@
+<HTML>
+<HEAD>
+<TITLE>April births</TITLE>
+</HEAD>
+
+<BODY>
+<body text="#000000" bgcolor="#FFFFCC" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<h3><b>Please fill in the following form:</B></h3>
+<FORM ACTION="http://www.herbertland.com/cgi-bin/set_birthday" NAME="form1"  onSubmit="return validatebirthForm(this)">
+<B>Your user name (required):</B>
+<INPUT TYPE="text" NAME="userName" VALUE="$$userName$$" onChange='valid_name_text(this, "user name", 1)' SIZE=20>
+<P><B>Your baby's name (required):</B>
+<INPUT TYPE="text" NAME="babyName" VALUE="$$babyName$$" onChange='valid_name_text(this, "baby name", 1)' SIZE=20>
+<P>
+<INPUT TYPE="radio" NAME="sex" VALUE="M" $$sex-chk-M$$><B>Boy</B>
+&nbsp; &nbsp; &nbsp; &nbsp;
+<INPUT TYPE="radio" NAME="sex" VALUE="F" $$sex-chk-F$$><B>Girl</B>
+
+<P><B>Date your baby was born:</B>
+Month
+<SELECT NAME="month">
+	<OPTION $$month-sel-Jan$$ VALUE=Jan>January
+	<OPTION $$month-sel-Feb$$ VALUE=Feb>Febuary
+	<OPTION $$month-sel-Mar$$ VALUE=Mar>March
+	<OPTION $$month-sel-Apr$$ VALUE=Apr>April
+	<OPTION $$month-sel-May$$ VALUE=May>May
+</SELECT>
+Day
+<SELECT NAME="day">
+<OPTION $$day-sel-1$$>1
+<OPTION $$day-sel-2$$>2
+<OPTION $$day-sel-3$$>3
+<OPTION $$day-sel-4$$>4
+<OPTION $$day-sel-5$$>5
+<OPTION $$day-sel-6$$>6
+<OPTION $$day-sel-7$$>7
+<OPTION $$day-sel-8$$>8
+<OPTION $$day-sel-9$$>9
+<OPTION $$day-sel-10$$>10
+<OPTION $$day-sel-11$$>11
+<OPTION $$day-sel-12$$>12
+<OPTION $$day-sel-13$$>13
+<OPTION $$day-sel-14$$>14
+<OPTION $$day-sel-15$$>15
+<OPTION $$day-sel-16$$>16
+<OPTION $$day-sel-17$$>17
+<OPTION $$day-sel-18$$>18
+<OPTION $$day-sel-19$$>19
+<OPTION $$day-sel-20$$>20
+<OPTION $$day-sel-21$$>21
+<OPTION $$day-sel-22$$>22
+<OPTION $$day-sel-23$$>23
+<OPTION $$day-sel-24$$>24
+<OPTION $$day-sel-25$$>25
+<OPTION $$day-sel-26$$>26
+<OPTION $$day-sel-27$$>27
+<OPTION $$day-sel-28$$>28
+<OPTION $$day-sel-29$$>29
+<OPTION $$day-sel-30$$>30
+<OPTION $$day-sel-31$$>31
+</SELECT>
+<P><B>Time of day:</B>
+<SELECT NAME="timehr">
+<OPTION $$timehr-sel-1$$>1
+<OPTION $$timehr-sel-2$$>2
+<OPTION $$timehr-sel-3$$>3
+<OPTION $$timehr-sel-4$$>4
+<OPTION $$timehr-sel-5$$>5
+<OPTION $$timehr-sel-6$$>6
+<OPTION $$timehr-sel-7$$>7
+<OPTION $$timehr-sel-8$$>8
+<OPTION $$timehr-sel-9$$>9
+<OPTION $$timehr-sel-10$$>10
+<OPTION $$timehr-sel-11$$>11
+<OPTION $$timehr-sel-12$$>12
+</SELECT>
+:
+<SELECT NAME="timemin">
+<OPTION $$timemin-sel-00$$>00
+<OPTION $$timemin-sel-01$$>01
+<OPTION $$timemin-sel-02$$>02
+<OPTION $$timemin-sel-03$$>03
+<OPTION $$timemin-sel-04$$>04
+<OPTION $$timemin-sel-05$$>05
+<OPTION $$timemin-sel-06$$>06
+<OPTION $$timemin-sel-07$$>07
+<OPTION $$timemin-sel-08$$>08
+<OPTION $$timemin-sel-09$$>09
+<OPTION $$timemin-sel-10$$>10
+<OPTION $$timemin-sel-11$$>11
+<OPTION $$timemin-sel-12$$>12
+<OPTION $$timemin-sel-13$$>13
+<OPTION $$timemin-sel-14$$>14
+<OPTION $$timemin-sel-15$$>15
+<OPTION $$timemin-sel-16$$>16
+<OPTION $$timemin-sel-17$$>17
+<OPTION $$timemin-sel-18$$>18
+<OPTION $$timemin-sel-19$$>19
+<OPTION $$timemin-sel-20$$>20
+<OPTION $$timemin-sel-21$$>21
+<OPTION $$timemin-sel-22$$>22
+<OPTION $$timemin-sel-23$$>23
+<OPTION $$timemin-sel-24$$>24
+<OPTION $$timemin-sel-25$$>25
+<OPTION $$timemin-sel-26$$>26
+<OPTION $$timemin-sel-27$$>27
+<OPTION $$timemin-sel-28$$>28
+<OPTION $$timemin-sel-29$$>29
+<OPTION $$timemin-sel-30$$>30
+<OPTION $$timemin-sel-31$$>31
+<OPTION $$timemin-sel-32$$>32
+<OPTION $$timemin-sel-33$$>33
+<OPTION $$timemin-sel-34$$>34
+<OPTION $$timemin-sel-35$$>35
+<OPTION $$timemin-sel-36$$>36
+<OPTION $$timemin-sel-37$$>37
+<OPTION $$timemin-sel-38$$>38
+<OPTION $$timemin-sel-39$$>39
+<OPTION $$timemin-sel-40$$>40
+<OPTION $$timemin-sel-41$$>41
+<OPTION $$timemin-sel-42$$>42
+<OPTION $$timemin-sel-43$$>43
+<OPTION $$timemin-sel-44$$>44
+<OPTION $$timemin-sel-45$$>45
+<OPTION $$timemin-sel-46$$>46
+<OPTION $$timemin-sel-47$$>47
+<OPTION $$timemin-sel-48$$>48
+<OPTION $$timemin-sel-49$$>49
+<OPTION $$timemin-sel-50$$>50
+<OPTION $$timemin-sel-51$$>51
+<OPTION $$timemin-sel-52$$>52
+<OPTION $$timemin-sel-53$$>53
+<OPTION $$timemin-sel-54$$>54
+<OPTION $$timemin-sel-55$$>55
+<OPTION $$timemin-sel-56$$>56
+<OPTION $$timemin-sel-57$$>57
+<OPTION $$timemin-sel-58$$>58
+<OPTION $$timemin-sel-59$$>59
+</SELECT>
+<SELECT NAME="timeampm">
+<OPTION $$timeampm-sel-am$$>am
+<OPTION $$timeampm-sel-pm$$>pm
+</SELECT>
+<P><B>Weight:</B>
+<SELECT NAME="weightlbs">
+<OPTION $$weightlbs-sel-1$$>1
+<OPTION $$weightlbs-sel-2$$>2
+<OPTION $$weightlbs-sel-3$$>3
+<OPTION $$weightlbs-sel-4$$>4
+<OPTION $$weightlbs-sel-5$$>5
+<OPTION $$weightlbs-sel-6$$>6
+<OPTION $$weightlbs-sel-7$$>7
+<OPTION $$weightlbs-sel-8$$>8
+<OPTION $$weightlbs-sel-9$$>9
+<OPTION $$weightlbs-sel-10$$>10
+<OPTION $$weightlbs-sel-11$$>11
+<OPTION $$weightlbs-sel-12$$>12
+<OPTION $$weightlbs-sel-13$$>13
+<OPTION $$weightlbs-sel-14$$>14
+<OPTION $$weightlbs-sel-15$$>15
+</SELECT>
+lbs.
+<SELECT NAME="weightonz">
+<OPTION $$weightonz-sel-0$$>0
+<OPTION $$weightonz-sel-1$$>1
+<OPTION $$weightonz-sel-2$$>2
+<OPTION $$weightonz-sel-3$$>3
+<OPTION $$weightonz-sel-4$$>4
+<OPTION $$weightonz-sel-5$$>5
+<OPTION $$weightonz-sel-6$$>6
+<OPTION $$weightonz-sel-7$$>7
+<OPTION $$weightonz-sel-8$$>8
+<OPTION $$weightonz-sel-9$$>9
+<OPTION $$weightonz-sel-10$$>10
+<OPTION $$weightonz-sel-11$$>11
+<OPTION $$weightonz-sel-12$$>12
+<OPTION $$weightonz-sel-13$$>13
+<OPTION $$weightonz-sel-14$$>14
+<OPTION $$weightonz-sel-15$$>15
+</SELECT>
+ounces
+<P><B>Length:</B>
+<SELECT NAME="length">
+<OPTION $$length-sel-10$$>10
+<OPTION $$length-sel-10.5$$>10.5
+<OPTION $$length-sel-11$$>11
+<OPTION $$length-sel-11.5$$>11.5
+<OPTION $$length-sel-12$$>12
+<OPTION $$length-sel-12.5$$>12.5
+<OPTION $$length-sel-13$$>13
+<OPTION $$length-sel-13.5$$>13.5
+<OPTION $$length-sel-14$$>14
+<OPTION $$length-sel-14.5$$>14.5
+<OPTION $$length-sel-15$$>15
+<OPTION $$length-sel-15.5$$>15.5
+<OPTION $$length-sel-16$$>16
+<OPTION $$length-sel-16.5$$>16.5
+<OPTION $$length-sel-17$$>17
+<OPTION $$length-sel-17.5$$>17.5
+<OPTION $$length-sel-18$$>18
+<OPTION $$length-sel-18.5$$>18.5
+<OPTION $$length-sel-19$$>19
+<OPTION $$length-sel-19.5$$>19.5
+<OPTION $$length-sel-20$$>20
+<OPTION $$length-sel-20.5$$>20.5
+<OPTION $$length-sel-21$$>21
+<OPTION $$length-sel-21.5$$>21.5
+<OPTION $$length-sel-22$$>22
+<OPTION $$length-sel-22.5$$>22.5
+<OPTION $$length-sel-23$$>23
+<OPTION $$length-sel-23.5$$>23.5
+<OPTION $$length-sel-24$$>24
+<OPTION $$length-sel-24.5$$>24.5
+<OPTION $$length-sel-25$$>25
+<OPTION $$length-sel-25.5$$>25.5
+<OPTION $$length-sel-26$$>26
+<OPTION $$length-sel-26.5$$>26.5
+<OPTION $$length-sel-27$$>27
+<OPTION $$length-sel-27.5$$>27.5
+<OPTION $$length-sel-28$$>28
+<OPTION $$length-sel-28.5$$>28.5
+<OPTION $$length-sel-29$$>29
+<OPTION $$length-sel-29.5$$>29.5
+<OPTION $$length-sel-30$$>30
+<OPTION $$length-sel-30.5$$>30.5
+</SELECT>
+inches
+<P><B>Comments:</B>
+<BR>
+<TEXTAREA NAME="comment" ROWS=4 COLS=60 WRAP onChange='valid_text_nowsp(this, "comment", 0)'>$$comment$$</TEXTAREA>
+<P><B>Picture URL:</B>
+<INPUT TYPE="text" NAME="picture" VALUE="$$picture$$" SIZE=60 onChange='valid_text(this, "picture", 0)'>
+
+<P><P><INPUT TYPE="submit" VALUE="Continue">
+<INPUT TYPE="hidden" NAME="command" VALUE="show_confirm">
+</FORM>
+<FORM ACTION="http://www.herbertland.com/cgi-bin/set_birthday" NAME="form1">
+<INPUT TYPE="submit" VALUE="Go back to calendar">
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,23 @@
+#######################################################################
+#                         Email Variables (examples) 		      #
+#######################################################################
+
+should_i_mail			yes
+email_subject			Feedback Form Data
+email_of_receiver		postmaster
+
+#######################################################################
+#                  Database Variables                                 #
+#######################################################################
+
+should_i_append_database	yes
+location_of_database		form/feedback_fr.data
+database_delimiter		,
+
+#######################################################################
+#                  Thankyou stuff                                     #
+#######################################################################
+
+thankyou_reply_html		form/fb_thankyou_fr.html
+sorry_reply_html		form/sorry_fr.html
+

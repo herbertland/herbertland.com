@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Feedback Form</TITLE>
+</HEAD>
+<!--- The following is required for the system --->
+<FORM ACTION = "/cgi-bin/form.cgi" METHOD = "POST">
+
+<!--- The following is required for the system --->
+<INPUT TYPE = "hidden" NAME = "formtype" VALUE = "generic">
+<INPUT TYPE = "hidden" NAME = "setup_file" VALUE = "form/feedback.setup">
+
+<BLOCKQUOTE>
+<HR>
+<H2>Example Feedback Form </H2>
+<H4>(Please customize)</H4>
+<HR>
+
+<TABLE BORDER = "0">
+
+<TR>
+<TH ALIGN = "right">Your Name:</TH>
+<TD><INPUT TYPE = "text" NAME = "enduser_name" SIZE = "55" MAXLENGTH = "35"></TD>
+</TR>
+
+
+<TR>
+<TH ALIGN = "right">*Your Email:</TH>
+<TD><INPUT TYPE = "text" NAME = "enduser_email_" SIZE = "55" 
+    MAXLENGTH = "35"></TD>
+</TR>
+
+<TR>
+<TH ALIGN = "right">*Comments:</TH>
+<TD><TEXTAREA WRAP = "virtual" NAME = "comments_" ROWS = "10" COLS = "55">
+</TEXTAREA></TD>
+<TR>
+<TH ALIGN = "left"></TH>
+<TD>
+<INPUT TYPE = "submit" VALUE = "Submit this information.">
+<INPUT TYPE = "reset" VALUE = "Clear">
+</TR>
+
+</TABLE>
+</BLOCKQUOTE>
+</FORM>
+</BODY>
+</HTML>

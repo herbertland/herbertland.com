@@ -1,0 +1,195 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (Win95; I) [Netscape]">
+   <meta name="Author" content="Tom Herbert">
+   <title>Welcome to Herbertland</title>
+</head>
+<body text="#000000" bgcolor=green link="#0000EE" vlink="#551A8B" 
+
+<dl>
+<center>
+<h2>
+<b><font color="#993300"><font size=+2>Welcome to</font></font></b></h2></center>
+
+<center><img SRC="http://www.herbertland.com/herbertbanner.jpg" height=110 width=501></center>
+
+<center>
+<dt>
+</dt></center>
+</dl>
+
+<!--
+<center>
+<p><b><font color="#990000"><font size=+3>Herbertland proudly
+present...</font></font></b></center>
+
+-->
+
+<br>&nbsp;
+<center><table WIDTH=100% >
+</tr>
+
+<!--
+<tr>
+<td></td>
+<td>
+<ul><b><font size=+1><a href="http://www.herbertland.com/house/index.html">The
+Herbertland House Tour</a></font></b></ul>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<ul><b><font face="Times New Roman,Times"><font size=+1><a href="http://www.herbertland.com/wedding">Wedding
+Photos</a></font></font></b></ul>
+</td>
+</tr>
+-->
+
+<tr>
+<td></td>
+<td>
+<ul><b><font size=+1><a href="http://www.herbertland.com/blue_angels/index.html">The
+Blue Angels, Oct. 1999, SF Fleet Week</a></font></b></ul>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<ul><b><font size+=1>Coming soon: <i><a href="http://www.herbertland.com/mcinet/index.htm">Billing Practices Regarding MCI</a></i></font></b><ul>
+</td>
+</tr>
+
+</table></center>
+
+<BR>
+<center>Comments or suggestions for this site may be sent to <A HREF="mailto:feedback@herbertland.com">feedback@herbertland.com</A></center>
+
+<br><script LANGUAGE="JavaScript1.2">
+
+movePeriod = 200;
+numImg= 15;
+width= 100;
+height= 90;
+pos_x= 0;
+pos_y= 100;
+current= 0;
+step= 15;
+
+nameA= new Array(numImg);
+heightA= new Array(numImg);
+
+heightA[0]= 79;
+heightA[1]= 81;
+heightA[2]= 84;
+heightA[3]= 85;
+heightA[4]= 86;
+heightA[5]= 84;
+heightA[6]= 78;
+heightA[7]= 74;
+heightA[8]= 73;
+heightA[9]= 80;
+heightA[10]= 82;
+heightA[11]= 81;
+heightA[12]= 78;
+heightA[13]= 74;
+heightA[14]= 73;
+
+wait= 0;
+once= 0;
+function moveDiv() {
+    if (wait) {
+	wait--;
+	return;
+    }
+    obj= document.all[nameA[current]];
+    obj.visibility= "hidden";
+    current= (current + 1) % numImg;
+
+    pos_x+= step;
+    if (pos_x > window.innerWidth){
+	 wait= Math.round((Math.random() * 20 + 10) * (1000 / movePeriod))
+       pos_x= -width;
+	 return;
+    }
+    obj= document.all[nameA[current]];
+    obj.top= window.innerHeight - heightA[current];
+    obj.left= pos_x;
+    obj.visibility= "visible";
+}
+
+function moveImage() {
+	if(!document.all) document.all = document;
+	max_x= window.innerWidth;
+	pos_y= window.innerHeight - height;
+	pos_x= -width;
+	for (i= 0; i < numImg; i++) {
+	  if (i < 10) {
+	      nameA[i]= new String("img0" + i);
+	  } else {
+	      nameA[i]= new String("img" + i);
+	  }
+	  obj= document.all[nameA[i]];
+	  obj.visibility= "hidden";
+	}
+ 	setInterval("moveDiv()",movePeriod);
+}
+
+window.onload = moveImage;
+//-->
+</script>
+<!-- INSET DHTML CODING --></center>
+
+<div ID="img00" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk01c.gif" BORDER=0 ></div>
+
+<div ID="img01" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk03c.gif" BORDER=0 ></div>
+
+<div ID="img02" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk05c.gif" BORDER=0 ></div>
+
+<div ID="img03" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk08c.gif" BORDER=0 ></div>
+
+<div ID="img04" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk10c.gif" BORDER=0 ></div>
+
+<div ID="img05" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk12c.gif" BORDER=0 ></div>
+
+<div ID="img06" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk14c.gif" BORDER=0 ></div>
+
+<div ID="img07" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk16c.gif" BORDER=0 ></div>
+
+<div ID="img08" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk18c.gif" BORDER=0 ></div>
+
+<div ID="img09" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk20c.gif" BORDER=0 ></div>
+
+<div ID="img10" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk22c.gif" BORDER=0 ></div>
+
+<div ID="img11" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk24c.gif" BORDER=0 ></div>
+
+<div ID="img12" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk26c.gif" BORDER=0 ></div>
+
+<div ID="img13" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk28c.gif" BORDER=0 ></div>
+
+<div ID="img14" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="http://www.herbertland.com/awk30c.gif" BORDER=0 ></div>
+
+<center><!-- END DHTML CODING --></center>
+
+</body>
+</html>

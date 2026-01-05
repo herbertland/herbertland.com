@@ -1,0 +1,90 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Jan Herbert">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en]C-{C-UDP; EBM-Fujitsu1}  (Win98; U) [Netscape]">
+   <title>User/Baby Info</title>
+</head>
+<body text="#000000" bgcolor="#FFFFCC" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<dl>
+<dt>
+<b><font color="#000000">The following information has been entered:</font></b></dt>
+</dl>
+
+<dl>
+<dd>
+<font color="#000000">
+<b>Mommy:</b> $$userName$$</dd>
+
+<dd>
+<b>Baby: </b>$$babyName$$</font></dd>
+
+<dd>
+<b>Birthdate:</b> $$month$$
+$$day$$</dd>
+
+<dd>
+<b>Time:</b> $$timehr$$
+:$$timemin$$
+$$timeampm$$</dd>
+
+<dd>
+<b>Weight:</b> $$weightlbs$$ lbs.
+$$weightonz$$ ounces</dd>
+
+<dd>
+<b>Length:</b> $$length$$ inches</dd>
+
+<dd>
+<b>Sex:</b> $$sex$$</dd>
+
+<dd>
+<b>Comment: </b>
+<BLOCKQUOTE>$$comment-brout$$</BLOCKQUOTE></dd>
+
+<dd>
+$$picture-ifset-<img src="%%%%%" NOSAVE>-<b>Picture: </b>No picture$$
+</dd>
+
+</dl>
+<B>If this information is correct, click on the "Submit" button.&nbsp;
+If you need to make changes, click the "Make changes" button below.</B></dl>
+
+<FORM ACTION="http://www.herbertland.com/cgi-bin/set_birthday" NAME="form1">
+<INPUT TYPE="submit" VALUE="Make changes">
+<INPUT TYPE="hidden" NAME="command" VALUE="show_form">
+<INPUT TYPE="hidden" NAME="userName" VALUE="$$userName$$">
+<INPUT TYPE="hidden" NAME="babyName" VALUE="$$babyName$$">
+<INPUT TYPE="hidden" NAME="sex" VALUE="$$sex$$">
+<INPUT TYPE="hidden" NAME="month" VALUE="$$month$$">
+<INPUT TYPE="hidden" NAME="day" VALUE="$$day$$">
+<INPUT TYPE="hidden" NAME="timehr" VALUE="$$timehr$$">
+<INPUT TYPE="hidden" NAME="timemin" VALUE="$$timemin$$">
+<INPUT TYPE="hidden" NAME="timeampm" VALUE="$$timeampm$$">
+<INPUT TYPE="hidden" NAME="weightlbs" VALUE="$$weightlbs$$">
+<INPUT TYPE="hidden" NAME="weightonz" VALUE="$$weightonz$$">
+<INPUT TYPE="hidden" NAME="length" VALUE="$$length$$">
+<INPUT TYPE="hidden" NAME="picture" VALUE="$$picture$$">
+<INPUT TYPE="hidden" NAME="comment" VALUE="$$comment$$">    
+</FORM>                   
+<FORM ACTION="http://www.herbertland.com/cgi-bin/set_birthday" NAME="form2">
+<INPUT TYPE="submit" VALUE="Submit">
+<INPUT TYPE="hidden" NAME="command" VALUE="add">
+<INPUT TYPE="hidden" NAME="userName" VALUE="$$userName$$">
+<INPUT TYPE="hidden" NAME="babyName" VALUE="$$babyName$$">
+<INPUT TYPE="hidden" NAME="sex" VALUE="$$sex$$">
+<INPUT TYPE="hidden" NAME="month" VALUE="$$month$$">
+<INPUT TYPE="hidden" NAME="day" VALUE="$$day$$">
+<INPUT TYPE="hidden" NAME="timehr" VALUE="$$timehr$$">
+<INPUT TYPE="hidden" NAME="timemin" VALUE="$$timemin$$">
+<INPUT TYPE="hidden" NAME="timeampm" VALUE="$$timeampm$$">
+<INPUT TYPE="hidden" NAME="weightlbs" VALUE="$$weightlbs$$">
+<INPUT TYPE="hidden" NAME="weightonz" VALUE="$$weightonz$$">
+<INPUT TYPE="hidden" NAME="length" VALUE="$$length$$">
+<INPUT TYPE="hidden" NAME="picture" VALUE="$$picture$$">
+<INPUT TYPE="hidden" NAME="comment" VALUE="$$comment$$">    
+</FORM>                   
+</body>
+</html>

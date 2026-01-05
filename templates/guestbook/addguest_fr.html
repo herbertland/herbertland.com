@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Ajout d'un visiteur à notre livre d'or</title>
+  </head>
+    <center>
+      <h1>Ajout à notre livre d'or</h1>
+
+    Veuillez remplir les zones vides ci-dessous pour ajouter votre entrée à notre livre d'or. Merci&nbsp;!
+    </center>
+   <hr>
+ <form method=POST action="/cgi-bin/guestbook/guestbook.cgi">
+   <INPUT TYPE = "hidden" NAME = "setup_file" VALUE = "guestbook/guestbook.setup">
+   <table border="0">
+     <tr>
+      <td><p align=right>*Nom&nbsp;:</p></td><td><p><input type=text name=realname size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>Adresse électronique&nbsp;:</p></td><td><p><input type=text name=username size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>URL&nbsp;:</p></td><td><p><input type=text name=url size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>Ville&nbsp;:</p></td><td><p><input type=text name=city size=60><br></td>  
+     <tr>
+      <td><p align=right>État&nbsp;:</p></td><td><p><input type=text name=state size=15><br> </td>
+     </tr>
+     <tr>
+       <td><p align=right>Pays&nbsp;:</p></td><td><p><input type=text value=France name=country size=15>        <br></td>
+     </tr>
+     <tr>
+      <td><p align=right>*Commentaires&nbsp;: </p></td><td><p> <textarea name=comments COLS=60 ROWS=4></textarea><br></td>
+     </tr>
+     <td></td><p>
+      <td>
+      <input type=submit value="Envoyer vos commentaires"> <input type=reset value="Effacer"> <br></td>
+     </tr>
+    </table>
+    </form>
+    <hr>
+    * Les champs Nom et Commentaires sont obligatoires.  <br>
+  </body>
+</html>

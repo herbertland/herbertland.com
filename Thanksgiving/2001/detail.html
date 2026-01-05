@@ -1,0 +1,124 @@
+<HTML>
+<body text="#000000" bgcolor="#8FAFAF" link="#FFCC33" vlink="#993399" alink="#FF0000">
+<center>
+<table>
+<tr>
+<td align=center>
+<img SRC="http://www.herbertland.com/menu/welcome.gif">
+</td>
+</tr>
+<tr>
+<td align=center>
+<img SRC="http://www.herbertland.com/herbertland.gif">
+</td>
+</tr>
+</table>
+</center>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<center><font size=1>Copyright 2000 Herbertland.com</font></center>
+<script LANGUAGE="JavaScript1.2">
+
+current_main = "";
+current_text = "";
+
+function change_banner(name)
+{
+	if (current_main != "") {
+		obj = document.all[current_main];
+		if (obj) {
+			obj.visibility = "hidden";
+		}
+	}
+	if (current_text != "") {
+		obj = document.all[current_text];
+		if (obj) {
+			obj.visibility = "hidden";
+		}
+	}
+	current_main = name + "main";
+	current_text = name + "text";
+
+	obj = document.all[current_main];
+	if (obj) {
+		obj.visibility = "visible";
+	} else {
+		current_main = "";
+	}
+
+	obj = document.all[current_text];
+	if (obj) {
+		obj.visibility = "visible";
+	} else {
+		current_text = "";
+	}
+}
+		
+
+function outsign(name) {
+	change_banner("home");
+}
+
+function setsign(name) {
+	change_banner(name);
+}
+
+function init_w() {
+ 	if (!document.all) {
+		document.all = document;
+	}
+	change_banner("home");
+}
+
+window.onload = init_w;
+//-->
+</script>
+
+<!-- INSET DHTML CODING -->
+<div ID="bigsign" STYLE="position:absolute; 
+ top:75; left:25; visibility:visible;;width:100"><img SRC="menu/turkey_sign.gif" BORDER=0 ></div>
+
+<div ID="newmain" STYLE="position:absolute; 
+ top:275; left:50; visibility:hidden;;width:100"><img SRC="menu/new_main.gif" BORDER=0 ></div>
+
+<div ID="newtext" STYLE="position:absolute; 
+ top:310; left:70; visibility:hidden;;width:100"><img SRC="menu/new_text.gif" BORDER=0 ></div>
+
+<div ID="aworldmain" STYLE="position:absolute; 
+ top:275; left:50; visibility:hidden;;width:100"><img SRC="menu/aworld_main.gif" BORDER=0 ></div>
+
+<div ID="aworldtext" STYLE="position:absolute; 
+ top:310; left:70; visibility:hidden;;width:100"><img SRC="menu/aworld_text.gif" BORDER=0 ></div>
+
+<div ID="departmentsmain" STYLE="position:absolute; 
+ top:275; left:50; visibility:hidden;;width:100"><img SRC="menu/departments_main.gif" BORDER=0 ></div>
+
+<div ID="departmentstext" STYLE="position:absolute; 
+ top:310; left:70; visibility:hidden;;width:100"><img SRC="menu/departments_text.gif" BORDER=0 ></div>
+
+<div ID="mcinetmain" STYLE="position:absolute; 
+ top:275; left:50; visibility:hidden;;width:100"><img SRC="menu/mcinet_main.gif" BORDER=0 ></div>
+
+<div ID="mcinettext" STYLE="position:absolute; 
+ top:310; left:70; visibility:hidden;;width:100"><img SRC="menu/mcinet_text.gif" BORDER=0 ></div>
+
+<div ID="homemain" STYLE="position:absolute; 
+ top:275; left:50; visibility:hidden;;width:100"><img SRC="menu/home_main.gif" BORDER=0 ></div>
+
+<div ID="hometext" STYLE="position:absolute; 
+ top:310; left:70; visibility:hidden;;width:100"><img SRC="menu/home_text.gif" BORDER=0 ></div>
+
+<div ID="contactmain" STYLE="position:absolute; 
+ top:275; left:50; visibility:hidden;;width:100"><img SRC="menu/contact_main.gif" BORDER=0 ></div>
+
+<div ID="contacttext" STYLE="position:absolute; 
+ top:310; left:70; visibility:hidden;;width:100"><img SRC="menu/contact_text.gif" BORDER=0 ></div>
+
+<center><!-- END DHTML CODING --></center>
+
+</body>
+</html>

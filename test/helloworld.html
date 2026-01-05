@@ -1,0 +1,21 @@
+<HTML>
+
+function displayPassword() {
+	alert("\nname is -->" +
+	document.entryForm.secret.name +
+	"\nvalue is -->" +
+	document .entryForm.secret.value +
+	"\ndefaultValue is __>" +
+	document.entryForm.secret.defaultValue)
+}
+
+<BR>
+<FORM> NAME="entryForm">
+<B>Please enter a secret password and then click the button:</B>
+<INPUT TYPE="password" NAME="secret" SIZE="15"
+VALUE="bosefus">
+
+<INPUT TYPE="button" NAME="passwordViewer"
+VALUE="Push To View" onClick="displayPassword()">
+
+</HTML>

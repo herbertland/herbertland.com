@@ -1,0 +1,134 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (Win95; I) [Netscape]">
+   <meta name="Author" content="Tom Herbert">
+   <title>Welcome to Herbertland</title>
+</head>
+<body text="#000000" bgcolor="#C0C0C0" link="#FFCC33" vlink="#009900" alink="#FFFFCC" background="http://www.herbertland.com/NY2002/2002_jan.jpg" nosave>
+<p><script LANGUAGE="JavaScript1.2">
+moveFlakePeriod = 100;
+
+numBalls= 8;
+posX= new Array(numBalls);
+posY= new Array(numBalls);
+fwidth= new Array(numBalls);
+fheight= new Array(numBalls);
+delay= new Array(numBalls);
+maxX= new Array(numBalls);
+maxY= new Array(numBalls);
+minX= new Array(numBalls);
+minY= new Array(numBalls);
+velX= new Array(numBalls);
+velY= new Array(numBalls);
+fnameA= new Array(numBalls);
+friction= new Array(numBalls);
+kval= 0;
+acc = 1;
+
+function resetFlake(i) {
+	posX[i] = 220;
+	posY[i] = 180;
+	vel = Math.random() * 10 + 7;
+	velX[i]= vel;
+	velY[i]= -vel;
+	delay[i]= 1;
+	obj= document.all[fnameA[i]];
+	obj.visibility= "hidden";
+}
+
+function movementFlakeOne() {
+  var hitX, hitY;
+  hitX= 0;
+  hitY= 0;
+  thresh= 0;
+  for (i= 0; i < numBalls; i++) {
+    if (delay[i] > 0) {
+	delay[i]--;
+	if (delay[i] <= 0) {
+		obj= document.all[fnameA[i]];
+		obj.visibility= "visible";
+	}
+	continue;
+    }
+    posX[i]+= velX[i];
+    posY[i]+= velY[i];
+    velY[i]+= acc;
+
+    if (posY[i] > maxY[i]) {
+		resetFlake(i);
+    }
+  } 
+}
+
+function setFlakePosition() {
+  for (i= 0; i < numBalls; i++) {
+    if (delay[i]) {
+	continue;
+    }	
+    document.all[fnameA[i]].top= posY[i];
+    document.all[fnameA[i]].left= posX[i];
+  }
+}
+
+function moveFlakeDiv() {
+ movementFlakeOne();
+ setFlakePosition();
+}
+
+
+function moveFlakeImage() {
+	if(!document.all) document.all = document;
+	maxXX= window.innerWidth - 40;
+	for (i= 0; i < numBalls; i++) {
+		fnameA[i]= new String("ball00" + i);
+		fwidth[i]= 40;
+                fheight[i]= 40;
+                friction[i]= 0.0;
+                maxY[i]= window.innerHeight - fheight[i];   
+		resetFlake(i);
+		delay[i]= Math.round(Math.random() * 80);	
+	}
+ 	setInterval("moveFlakeDiv()",moveFlakePeriod);
+}
+
+function moveAllImage() {
+	moveFlakeImage();
+}
+
+window.onload = moveAllImage;
+//-->
+</script>
+<!-- INSET DHTML CODING -->
+<div ID="ball001" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti1.gif" BORDER=0 ></div>
+
+<div ID="ball002" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti2.gif" BORDER=0 ></div>
+
+<div ID="ball003" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti3.gif" BORDER=0 ></div>
+
+<div ID="ball004" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti4.gif" BORDER=0 ></div>
+
+<div ID="ball005" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti5.gif" BORDER=0 ></div>
+
+<div ID="ball006" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti6.gif" BORDER=0 ></div>
+
+<div ID="ball007" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti7.gif" BORDER=0 ></div>
+
+<div ID="ball000" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/confetti8.gif" BORDER=0 ></div>
+<div ID="bottle" STYLE="position:absolute; 
+ top:150; left:0;"><img SRC="http://www.herbertland.com/NY2002/bottle.gif" BORDER=0 ></div>
+
+<center><!-- END DHTML CODING --></center>
+
+</body>
+</html>
+

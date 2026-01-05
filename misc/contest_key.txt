@@ -1,0 +1,49 @@
+Contest map:
+
+LaToya-- pic1, pic2 (house.jpg)
+
+Nadelle-- pic3 (drums)
+
+Carla-- pic4 (pencil)
+
+Michelle-- pic5 (steps)
+
+Ginny-- pic 6 (clock)
+
+Kim-- pic 7 (swing)
+
+Vicki-- pic 8 (desk)
+
+Jan-- pic 9 (flute)
+
+Colleen-- pic 10 (rain)
+
+Pam-- pic 11 (snow)
+
+Julie-- pic 12 (window)
+
+---------ANSWERS------
+
+7   A: Ginny (clock)
+
+6   B: Kim (swing)
+
+11 C: Julie (window)
+
+3   D: Jan (flute)
+
+2   E: Michelle (steps)
+
+1   F: Carla (pencil)
+
+4   G: Latoya (house)
+
+10 H: Pam (snow)
+
+8   I: Nadelle (drums)
+
+9   J: Coleen (rain)
+
+5   K: Vicki (desk)
+
+7|6|11|3|2|1|4|10|8|9|5|

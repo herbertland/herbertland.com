@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Formulaire de commentaires</TITLE>
+</HEAD>
+<!--- The following is required for the system --->
+<FORM ACTION = "/cgi-bin/form.cgi" METHOD = "POST">
+
+<!--- The following is required for the system --->
+<INPUT TYPE = "hidden" NAME = "formtype" VALUE = "generic">
+<INPUT TYPE = "hidden" NAME = "setup_file" VALUE = "form/feedback_fr.setup">
+
+<BLOCKQUOTE>
+<HR>
+<H2>Exemple de formulaire de commentaires</H2>
+<H4>(Veuillez personnaliser)</H4>
+<HR>
+
+<TABLE BORDER = "0">
+
+<TR>
+<TH ALIGN = "right">Nom&nbsp;:</TH>
+<TD><INPUT TYPE = "text" NAME = "enduser_name" SIZE = "55" MAXLENGTH = "35"></TD>
+</TR>
+
+
+<TR>
+<TH ALIGN = "right">*Adresse électronique&nbsp;:</TH>
+<TD><INPUT TYPE = "text" NAME = "enduser_email_" SIZE = "55" 
+    MAXLENGTH = "35"></TD>
+</TR>
+
+<TR>
+<TH ALIGN = "right">*Commentaires&nbsp;:</TH>
+<TD><TEXTAREA WRAP = "virtual" NAME = "comments_" ROWS = "10" COLS = "55">
+</TEXTAREA></TD>
+<TR>
+<TH ALIGN = "left"></TH>
+<TD>
+<INPUT TYPE = "submit" VALUE = "Submit this information.">
+<INPUT TYPE = "reset" VALUE = "Effacer">
+</TR>
+
+</TABLE>
+</BLOCKQUOTE>
+</FORM>
+</BODY>
+</HTML>

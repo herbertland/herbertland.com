@@ -1,0 +1,181 @@
+<HTML>
+<body text="#000000" bgcolor="#5F9EA0" link="#FFCC33" vlink="#993399" alink="#FF0000" background="http://www.herbertland.com/menu/slice.jpg">
+<center>
+<table>
+<tr>
+<td align=center>
+<img SRC="http://www.herbertland.com/menu/welcome.gif">
+</td>
+</tr>
+</table>
+</center>
+<table>
+<tr>
+<td width=350>
+</td>
+<td width=40%>
+<table>
+<tr>
+<td background="http://www.herbertland.com/menu/slice.jpg">
+</td>
+</tr>
+<tr><td><br></td></tr>
+<tr>
+<td background="http://www.herbertland.com/menu/slice.jpg">
+<center>
+<font color=white><h4>New on Herbertland</h4></font>
+</center>
+<p>
+<font color=#ff2222>12-01-02</font>
+<font color=white>
+<a href="http://www.herbertland.com/grapestomp">Cinnabar Grapestomp, 2002</a>
+<br>A few pics taken of the whole family (&amp; Ken) stomping on grapes in the Santa Cruz Mountains!</font>
+</font>
+<p>
+<font color=#ff2222>12-01-02</font>
+<a href="http://www.herbertland.com/Amelia">Amelia's Corner, June-October 2002</a>
+<font color=white>
+<br>New pictures of our newest member.
+</font>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+<center><font size=1>Copyright 2000 Herbertland.com</font></center>
+<script LANGUAGE="JavaScript1.2">
+
+current_main = "";
+current_text = "";
+using_ie = (document.all) ? true : false;
+using_ns = (document.layers) ? true : false;
+
+function change_banner(name)
+{
+	sign = document.all["bigsign"];
+	if (current_main != "") {
+		obj = document.all[current_main];
+		if (obj) {
+			if (using_ie) {
+				obj.style.visibility = "hidden";
+			} else {
+				obj.visibility = "hidden";
+			}
+		}
+	}
+	if (current_text != "") {
+		obj = document.all[current_text];
+		if (using_ie) {
+			obj.style.visibility = "hidden";
+		} else {
+			obj.visibility = "hidden";
+		}
+	}
+	current_main = name + "main";
+	current_text = name + "text";
+
+	obj = document.all[current_main];
+	if (obj) {
+		if (using_ie) {
+//			sign.style.top = obj.style.top - 10;
+			vv = obj.style.top;
+			sign.style.top = vv;
+			sign.style.visibility = "visible";
+			obj.style.visibility = "visible";
+		} else {
+			sign.top = obj.top - 10;
+			sign.visibility = "visible";
+			obj.visibility = "visible";
+		}
+	} else {
+		current_main = "";
+	}
+
+	obj = document.all[current_text];
+	if (obj) {
+		if (using_ie) {
+			obj.style.visibility = "visible";
+		} else {
+			obj.visibility = "visible";
+		}
+	} else {
+		current_text = "";
+	}
+}
+		
+
+function outsign(name) {
+//	change_banner("home");
+}
+
+function setsign(name) {
+	change_banner(name);
+}
+
+function init_w() {
+ 	if (!document.all) {
+		document.all = document;
+	}
+	change_banner("home");
+}
+
+window.onload = init_w;
+//-->
+</script>
+
+<!-- INSET DHTML CODING -->
+<div ID="bigsign" STYLE="position:absolute; 
+ top:120; left:0; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/bsign.gif" BORDER=0 ></div>
+
+<div ID="homemain" STYLE="position:absolute; 
+ top:115; left:5; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/home_main.gif" BORDER=0 ></div>
+
+<div ID="hometext" STYLE="position:absolute; 
+ top:150; left:30; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/home_text.gif" BORDER=0 ></div>
+
+<div ID="newmain" STYLE="position:absolute;
+ top:160; left:5; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/new_main.gif" BO
+RDER=0 ></div>
+
+<div ID="newtext" STYLE="position:absolute;
+ top:195; left:30; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/new_text.gif" BO
+RDER=0 ></div>
+
+<div ID="acornermain" STYLE="position:absolute;
+ top:205; left:5; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/acorner_main.gif"
+ BORDER=0 ></div>
+
+<div ID="acornertext" STYLE="position:absolute;
+ top:240; left:30; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/acorner_text.gif"
+ BORDER=0 ></div>
+  
+<div ID="aworldmain" STYLE="position:absolute;
+ top:250; left:5; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/aworld_main.gif"
+ BORDER=0 ></div>
+
+<div ID="aworldtext" STYLE="position:absolute;
+ top:285; left:30; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/aworld_text.gif"
+ BORDER=0 ></div>
+  
+<div ID="departmentsmain" STYLE="position:absolute; 
+ top:295; left:5; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/departments_main.gif" BORDER=0 ></div>
+
+<div ID="departmentstext" STYLE="position:absolute; 
+ top:330; left:30; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/departments_text.gif" BORDER=0 ></div>
+
+<div ID="mcinetmain" STYLE="position:absolute; 
+ top:340; left:5; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/mcinet_main.gif" BORDER=0 ></div>
+
+<div ID="mcinettext" STYLE="position:absolute; 
+ top:375; left:30; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/mcinet_text.gif" BORDER=0 ></div>
+
+<div ID="contactmain" STYLE="position:absolute; 
+ top:385; left:5; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/contact_main.gif" BORDER=0 ></div>
+
+<div ID="contacttext" STYLE="position:absolute; 
+ top:415; left:30; visibility:hidden; width:100"><img SRC="http://www.herbertland.com/menu/contact_text.gif" BORDER=0 ></div>
+
+<center><!-- END DHTML CODING --></center>
+
+</body>
+</html>

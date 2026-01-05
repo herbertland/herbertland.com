@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>ｹﾞｽﾄﾌﾞｯｸに登録</title>
+  </head>
+    <center>
+      <h1>ｹﾞｽﾄﾌﾞｯｸに登録</h1>
+
+    下記の空欄をご記入の上、ｹﾞｽﾄﾌﾞｯｸに登録をお願いします。ありがとうございます。 
+    </center>
+   <hr>
+ <form method=POST action="/cgi-bin/guestbook/guestbook.cgi">
+   <INPUT TYPE = "hidden" NAME = "setup_file" VALUE = "guestbook/guestbook.setup">
+   <table border="0">
+     <tr>
+      <td><p align=right>*お名前:</p></td><td><p><input type=text name=realname size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>E-Mail:</p></td><td><p><input type=text name=username size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>URL:</p></td><td><p><input type=text name=url size=60><br></td>
+     </tr>
+     <tr>
+       <td><p align=right>国名:</p></td><td><p><input type=text name=country size=15>        <br></td>
+     <tr>
+      <td><p align=right>都道府県名:</p></td><td><p><input type=text name=state size=15><br> </td>
+     </tr>
+     <tr>
+      <td><p align=right>市町村名:</p></td><td><p><input type=text name=city size=60><br></td>  
+     </tr>
+     <tr>
+      <td><p align=right>*ｺﾒﾝﾄ: </p></td><td><p> <textarea name=comments COLS=60 ROWS=4></textarea><br></td>
+     </tr>
+     <td></td><p>
+      <td>
+      <input type=submit value="ｺﾒﾝﾄを送る(S)"> <input type=reset value="画面ｸﾘｱ(C)"> <br></td>
+     </tr>
+    </table>
+    </form>
+    <hr>
+    * ｺﾒﾝﾄとお名前は、必ず記入して下さい。  <br>
+  </body>
+</html>

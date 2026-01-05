@@ -1,0 +1,43 @@
+;
+; MGI Storyboard File
+;
+
+[Identification]
+Type=MGI Storyboard File
+Version=2.0
+LibName=Library.vwl
+LibFullName=C:\Program Files\MGI\VideoWave\Library\Library.vwl
+
+[Storyboard]
+PanelCount=0
+StartPanel=0
+
+[Panel_0]
+PanelType=Scene
+SceneType=Video
+SceneThumbnailTime=00:00.000 ms
+SceneThumbnailFlags=0
+Comment=Material Begin
+Name=\\HQ\web_external\video\andy_tradingspaces.mpg
+Type=2
+FrameRate=25.00     
+Duration=00:28.960 ms
+Selected=0
+Infinite=0
+ScaleToFit=1
+SourceStart=00:00.000 ms
+UseFileDuration=0
+Comment for List=List Effects
+NumberOfEffects=0
+AudioMuted=0
+AudioLevel=1024
+AudioFadeIn=0
+AudioFadeOut=0
+ForceFadeOnTrack_0=0
+ForceFadeOnTrack_1=0
+ForceFadeOnTrack_2=0
+ForceFadeOnTrack_3=0
+ForceFadeOnTrack_4=0
+ForceFadeOnTrack_5=0
+AudioTrack=0
+

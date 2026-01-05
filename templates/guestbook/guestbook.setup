@@ -1,0 +1,6 @@
+##########################################
+#The current available setup parameter is 
+#guestbook_viewable    
+#(default to yes)
+##########################################
+guestbook_viewable		yes

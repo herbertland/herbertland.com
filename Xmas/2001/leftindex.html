@@ -1,0 +1,225 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; I; SunOS 5.8 sun4u) [Netscape]">
+   <title>Herbertland Home</title>
+</head>
+<body text="#000000" bgcolor="#5F9EA0" link="#FFCC33" vlink="#FFCC99" alink="#FF0000" background="http://www.herbertland.com/menu/slice2.gif">
+<br>
+<br>
+<br>
+<table cellspacing=0 cellpadding=0>
+<tr>
+<td>
+<img name="home_timg" src="http://www.herbertland.com/menu/null_target2.gif">
+</td>
+<td>
+<a href="http://www.herbertland.com/Xmas/2001/detail.html" target="detail" onMouseOver="setsign('home')" onMouseOut="outsign('home')"><img SRC="http://www.herbertland.com/menu/home.gif" border=0></a> 
+</td>
+</tr>
+<tr>
+<td>
+<img name="new_timg" src="http://www.herbertland.com/menu/null_target2.gif">
+</td>
+<td>
+<a href="http://www.herbertland.com/depts/new.html" target="detail" onMouseOver="setsign('new')" onMouseOut="outsign('new')"><img SRC="http://www.herbertland.com/menu/new.gif" border=0></a> 
+</td>
+</tr>
+<tr>
+<td>
+<img name="aworld_timg" src="http://www.herbertland.com/menu/null_target2.gif">
+</td>
+<td>
+<a href="http://www.herbertland.com/Andrew" target="_parent" onMouseOver="setsign('aworld')" onMouseOut="outsign('aworld')"><img SRC="http://www.herbertland.com/menu/andrews_world.gif" border=0></a> 
+</td>
+</tr>
+<tr>
+<td>
+<img name="departments_timg" src="http://www.herbertland.com/menu/null_target2.gif">
+</td>
+<td>
+<a href="http://www.herbertland.com/depts/links.html" target="detail" onMouseOver="setsign('departments')" onMouseOut="outsign('departments')"><img SRC="http://www.herbertland.com/menu/departments.gif" border=0></a> 
+</td>
+</tr>
+<tr>
+<td>
+<img name="mcinet_timg" src="http://www.herbertland.com/menu/null_target2.gif">
+</td>
+<td>
+<a href="http://www.mcinet.com" target="_parent" onMouseOver="setsign('mcinet')" onMouseOut="outsign('mcinet')"><img SRC="http://www.herbertland.com/menu/mcinet.gif" border=0></a> 
+</td>
+</tr>
+<tr>
+<td>
+<img name="contact_timg" src="http://www.herbertland.com/menu/null_target2.gif">
+</td>
+<td>
+<a href="http://www.herbertland.com/dept/contact.html" target="detail" onMouseOver="setsign('contact')" onMouseOut="outsign('contact')"><img SRC="http://www.herbertland.com/menu/contact_us.gif" border=0></a> 
+</td>
+</tr>
+</table>
+
+<script LANGUAGE="JavaScript1.2">
+
+current_main = "";
+current_text = "";
+
+function outsign(name) {
+	document[name + "_timg"].src =
+		"http://www.herbertland.com/menu/null_target2.gif";
+	if (parent.detail.outsign) {
+		parent.detail.outsign(name);
+	}
+}
+
+function setsign(name) {
+	document[name + "_timg"].src =
+		"http://www.herbertland.com/menu/santa.gif";
+	if (parent.detail.setsign) {
+		parent.detail.setsign(name);
+	}
+}
+
+</script>
+</body>
+</html>
+
+
+
+<script LANGUAGE="JavaScript1.2">
+
+function init_w() {
+	moveAllImage();
+}
+
+window.onload = init_w;
+
+moveFlakePeriod = 100;
+
+numBalls= 3;
+posX= new Array(numBalls);
+posY= new Array(numBalls);
+fwidth= new Array(numBalls);
+fheight= new Array(numBalls);
+delay= new Array(numBalls);
+maxX= new Array(numBalls);
+maxY= new Array(numBalls);
+minX= new Array(numBalls);
+minY= new Array(numBalls);
+velX= new Array(numBalls);
+velY= new Array(numBalls);
+fnameA= new Array(numBalls);
+friction= new Array(numBalls);
+kval= 0;
+
+function movementFlakeOne() {
+  var hitX, hitY;
+  hitX= 0;
+  hitY= 0;
+  thresh= 0;
+  for (i= 0; i < numBalls; i++) {
+    if (delay[i] > 0) {
+	delay[i]--;
+	if (delay[i] <= 0) {
+		obj= document.all[fnameA[i]];
+		obj.visibility= "visible";
+	}
+	continue;
+    }
+    posX[i]+= Math.random() * 2 - 1;
+    posY[i]+= velY[i];
+
+    if (posY[i] > maxY[i]) {
+	posY[i]= -80;
+	posX[i]= Math.random() * kval + (i * kval);
+	velX[i]= Math.random() * 6 + 2
+        delay[i]= Math.round(Math.random() * 20);
+	obj= document.all[fnameA[i]];
+	obj.visibility= "hidden";
+    }
+  } 
+}
+
+function setFlakePosition() {
+  for (i= 0; i < numBalls; i++) {
+    if (delay[i]) {
+	continue;
+    }	
+    document.all[fnameA[i]].top= posY[i];
+    document.all[fnameA[i]].left= posX[i];
+  }
+}
+
+  
+function moveFlakeDiv() {
+ movementFlakeOne();
+ setFlakePosition();
+}
+
+function moveFlakeImage() {
+	if(!document.all) document.all = document;
+	maxXX= window.innerWidth - 40;
+	kval= maxXX/numBalls;
+	for (i= 0; i < numBalls; i++) {
+	  posX[i]= Math.random() * (window.innerWidth - 40);
+	  posY[i]= Math.random() * (window.innerHeight - 40);
+	posY[i]= -80;
+	posX[i]= Math.random() * kval + (i * kval);
+	  velY[i]= Math.random() * 6 + 2;
+	  fwidth[i]= 40;
+	  fheight[i]= 40;
+	  friction[i]= 0.0;
+	  minX[i]= 0;
+	  minY[i]= 0;
+	
+	  fnameA[i]= new String("ball00" + i);
+	  maxX[i]= window.innerWidth - fwidth[i];
+	  maxY[i]= window.innerHeight;
+	  obj= document.all[fnameA[i]];
+	  obj.visibility= "hidden";
+ 	  delay[i]= Math.round(Math.random() * 100);
+	}
+ 	setInterval("moveFlakeDiv()",moveFlakePeriod);
+}
+
+function moveAllImage() {
+	moveFlakeImage();
+}
+
+//-->
+</script>
+
+<!-- INSET DHTML CODING -->
+<div ID="ball001" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball002" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball003" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball004" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball005" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball006" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball007" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball008" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball009" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball000" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="http://www.herbertland.com/Xmas/snowflake.gif" BORDER=0 ></div>
+
+<center><!-- END DHTML CODING --></center>
+

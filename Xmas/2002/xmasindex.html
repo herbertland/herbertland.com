@@ -1,0 +1,412 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en]C-{C-UDP; EBM-Fujitsu1}  (Win98; U) [Netscape]">
+   <title>Christmas 2002</title>
+</head>
+<body text="#000000" link="#FFCC33" vlink="#FFCC33" alink="#FFCC33" background="slice.jpg">
+<BGSOUND SRC="http://www.herbertland.com/music/Track01.cda" LOOP=INFINITE>
+<center><img SRC="Herbertland_xmas3.gif" ></center>
+
+<p><br>
+<table>
+<tr>
+<td WIDTH="280"></td>
+
+<td WIDTH="50%">
+<table>
+<tr>
+<td>
+<h4>
+<font color="#FFFFFF">New on Herbertland</font></h4>
+<font color="#FF2222">12-15-02</font><font color="#FFFFFF"><a href="http://www.herbertland.com/Xmas/2002/">Christmas
+time at Herbertland</a></font>
+<br><font color="#FFFFFF">A peak at Christmas around here...</font>
+<p><font color="#FF2222">12-15-02</font><font color="#FFFFFF"><a href="http://www.herbertland.com/family/november2002/">Tom's
+Birthday</a></font>
+<br><font color="#FFFFFF">Tom's birthday party</font>
+<p><font color="#FF2222">12-15-02</font><font color="#FFFFFF"><a href="http://www.herbertland.com/family/november2002/cincy2.html">Cincinnati
+Trip, November 2002</a></font>
+<br><font color="#FFFFFF">Pictures of the family &amp; foliage.</font>
+<p><font color="#FF2222">12-15-02</font><font color="#FFFFFF"><a href="http://www.herbertland.com/Amelia/pictures9.html">Amelia's
+Corner</a></font>
+<br><font color="#FFFFFF">New pictures of Amelia, includes her baptism,
+11/3/02.</font>
+<p><font color="#FF2220">12-15-02</font><font color="#FFFFFF"><a href="http://www.herbertland.com/Andrew/AndysPics3.html">Andy's
+World</a></font>
+<br><font color="#FFFFFF">New pictures of Andy, September - November, 2002</font></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="0"></td>
+</tr>
+</table>
+
+<center>
+<p><font size=-2>Copyright 2000 Herbertland.com</font></center>
+
+<p><br>
+<p><script LANGUAGE="JavaScript1.2">
+moveFlakePeriod = 100;
+
+numBalls= 10;
+posX= new Array(numBalls);
+posY= new Array(numBalls);
+fwidth= new Array(numBalls);
+fheight= new Array(numBalls);
+delay= new Array(numBalls);
+maxX= new Array(numBalls);
+maxY= new Array(numBalls);
+minX= new Array(numBalls);
+minY= new Array(numBalls);
+velX= new Array(numBalls);
+velY= new Array(numBalls);
+fnameA= new Array(numBalls);
+friction= new Array(numBalls);
+kval= 0;
+
+function movementFlakeOne() {
+  var hitX, hitY;
+  hitX= 0;
+  hitY= 0;
+  thresh= 0;
+  for (i= 0; i < numBalls; i++) {
+    if (delay[i] > 0) {
+	delay[i]--;
+	if (delay[i] <= 0) {
+		obj= document.all[fnameA[i]];
+		obj.visibility= "visible";
+	}
+	continue;
+    }
+    posX[i]+= Math.random() * 2 - 1;
+    posY[i]+= velY[i];
+
+    if (posY[i] > maxY[i]) {
+	posY[i]= -80;
+	posX[i]= Math.random() * kval + (i * kval);
+	velX[i]= Math.random() * 6 + 2
+        delay[i]= Math.round(Math.random() * 20);
+	obj= document.all[fnameA[i]];
+	obj.visibility= "hidden";
+    }
+  } 
+}
+
+function setFlakePosition() {
+  for (i= 0; i < numBalls; i++) {
+    if (delay[i]) {
+	continue;
+    }	
+    document.all[fnameA[i]].top= posY[i];
+    document.all[fnameA[i]].left= posX[i];
+  }
+}
+
+  
+function moveFlakeDiv() {
+ movementFlakeOne();
+ setFlakePosition();
+}
+
+function moveFlakeImage() {
+	if(!document.all) document.all = document;
+	maxXX= window.innerWidth - 40;
+	kval= maxXX/numBalls;
+	for (i= 0; i < numBalls; i++) {
+	  posX[i]= Math.random() * (window.innerWidth - 40);
+	  posY[i]= Math.random() * (window.innerHeight - 40);
+	posY[i]= -80;
+	posX[i]= Math.random() * kval + (i * kval);
+	  velY[i]= Math.random() * 6 + 2;
+	  fwidth[i]= 40;
+	  fheight[i]= 40;
+	  friction[i]= 0.0;
+	  minX[i]= 0;
+	  minY[i]= 0;
+	
+	  fnameA[i]= new String("ball00" + i);
+	  maxX[i]= window.innerWidth - fwidth[i];
+	  maxY[i]= window.innerHeight - fheight[i];
+	  obj= document.all[fnameA[i]];
+	  obj.visibility= "hidden";
+ 	  delay[i]= Math.round(Math.random() * 100);
+	}
+ 	setInterval("moveFlakeDiv()",moveFlakePeriod);
+}
+
+movePeriod = 200;
+numImg= 15;
+width= 100;
+height= 90;
+pos_x= 0;
+pos_y= 100;
+current= 0;
+step= 15;
+
+nameA= new Array(numImg);
+heightA= new Array(numImg);
+
+heightA[0]= 79;
+heightA[1]= 81;
+heightA[2]= 84;
+heightA[3]= 85;
+heightA[4]= 86;
+heightA[5]= 84;
+heightA[6]= 78;
+heightA[7]= 74;
+heightA[8]= 73;
+heightA[9]= 80;
+heightA[10]= 82;
+heightA[11]= 81;
+heightA[12]= 78;
+heightA[13]= 74;
+heightA[14]= 73;
+
+wait= 0;
+once= 0;
+function moveDiv() {
+    if (wait) {
+	wait--;
+	return;
+    }
+    obj= document.all[nameA[current]];
+    obj.visibility= "hidden";
+    current= (current + 1) % numImg;
+
+    pos_x+= step;
+    if (pos_x > window.innerWidth){
+	 wait= Math.round((Math.random() * 20 + 10) * (1000 / movePeriod))
+       pos_x= -width;
+	 return;
+    }
+    obj= document.all[nameA[current]];
+    obj.top= window.innerHeight - heightA[current];
+    obj.left= pos_x;
+    obj.visibility= "visible";
+}
+
+function moveImage() {
+	if(!document.all) document.all = document;
+	max_x= window.innerWidth;
+	pos_y= window.innerHeight - height;
+	pos_x= -width;
+	for (i= 0; i < numImg; i++) {
+	  if (i < 10) {
+	      nameA[i]= new String("img0" + i);
+	  } else {
+	      nameA[i]= new String("img" + i);
+	  }
+	  obj= document.all[nameA[i]];
+	  obj.visibility= "hidden";
+	}
+ 	setInterval("moveDiv()",movePeriod);
+}
+
+	
+function moveAllImage() {
+	moveFlakeImage();
+	moveImage();
+}
+
+current_main = "";
+current_text = "";
+using_ie = (document.all) ? true : false;
+using_ns = (document.layers) ? true : false;
+
+function change_banner(name)
+{
+	sign = document.all["bigsign"];
+	if (current_main != "") {
+		obj = document.all[current_main];
+		if (obj) {
+			if (using_ie) {
+				obj.style.visibility = "hidden";
+			} else {
+				obj.visibility = "hidden";
+			}
+		}
+	}
+	if (current_text != "") {
+		obj = document.all[current_text];
+		if (using_ie) {
+			obj.style.visibility = "hidden";
+			sign.style.visibility = "hidden";
+		} else {
+			obj.visibility = "hidden";
+			sign.visibility = "hidden";
+		}
+	}
+	current_main = name + "main";
+	current_text = name + "text";
+
+	obj = document.all[current_main];
+	if (obj) {
+		if (using_ie) {
+//			sign.style.top = obj.style.top - 10;
+			vv = obj.style.top;
+			sign.style.top = vv;
+			sign.style.visibility = "visible";
+			obj.style.visibility = "visible";
+		} else {
+			sign.top = obj.top - 10;
+			sign.visibility = "visible";
+			obj.visibility = "visible";
+		}
+	} else {
+		current_main = "";
+	}
+
+	obj = document.all[current_text];
+	if (obj) {
+		if (using_ie) {
+			obj.style.visibility = "visible";
+		} else {
+			obj.visibility = "visible";
+		}
+	} else {
+		current_text = "";
+	}
+}
+		
+
+function outsign(name) {
+	change_banner("none");
+}
+
+function setsign(name) {
+	change_banner(name);
+}
+
+function init_w() {
+ 	if (!document.all) {
+		document.all = document;
+	}
+	change_banner("home");
+	moveAllImage();
+}
+
+window.onload = init_w;
+//-->
+</script>
+<!-- INSET DHTML CODING -->
+<div ID="img00" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk01c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img01" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk03c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img02" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk05c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img03" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk08c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img04" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk10c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img05" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk12c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img06" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk14c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img07" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk16c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img08" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk18c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img09" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk20c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img10" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk22c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img11" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk24c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img12" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk26c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img13" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk28c_jpg.gif" BORDER=0 ></div>
+
+<div ID="img14" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:100"><img SRC="xmasawk30c_jpg.gif" BORDER=0 ></div>
+
+<div ID="ball001" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball002" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball003" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball004" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball005" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball006" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball007" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball008" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball009" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="ball000" STYLE="position:absolute; 
+ top:250; left:400; visibility:hidden;;width:79"><img SRC="snowflake.gif" BORDER=0 ></div>
+
+<div ID="bigsign" STYLE="position:absolute; 
+ top:120; left:0; visibility:hidden; width:100"><img SRC="bsign.gif" BORDER=0 ></div>
+
+<div ID="homemain" STYLE="position:absolute; 
+ top:115; left:5; visibility:hidden; width:100"><img SRC="home_main.gif" BORDER=0 ></div>
+
+<div ID="hometext" STYLE="position:absolute; 
+ top:150; left:30; visibility:hidden; width:100"><img SRC="home_text.gif" BORDER=0 ></div>
+
+<div ID="acornermain" STYLE="position:absolute;
+ top:160; left:5; visibility:hidden; width:100"><img SRC="acorner_main.gif" BORDER=0 ></div>
+
+<div ID="acornertext" STYLE="position:absolute;
+ top:195; left:30; visibility:hidden; width:100"><img SRC="acorner_text.gif" BORDER=0 ></div>
+
+<div ID="aworldmain" STYLE="position:absolute;
+ top:205; left:5; visibility:hidden; width:100"><img SRC="aworld_main.gif" BORDER=0 ></div>
+
+<div ID="aworldtext" STYLE="position:absolute;
+ top:240; left:30; visibility:hidden; width:100"><img SRC="aworld_text.gif" BORDER=0 ></div>
+
+<div ID="departmentsmain" STYLE="position:absolute; 
+ top:250; left:5; visibility:hidden; width:100"><img SRC="departments_main.gif" BORDER=0 ></div>
+
+<div ID="departmentstext" STYLE="position:absolute; 
+ top:285; left:30; visibility:hidden; width:100"><img SRC="departments_text.gif" BORDER=0 ></div>
+
+<div ID="mcinetmain" STYLE="position:absolute; 
+ top:295; left:5; visibility:hidden; width:100"><img SRC="mcinet_main.gif" BORDER=0 ></div>
+
+<div ID="mcinettext" STYLE="position:absolute; 
+ top:330; left:30; visibility:hidden; width:100"><img SRC="mcinet_text.gif" BORDER=0 ></div>
+
+<div ID="contactmain" STYLE="position:absolute; 
+ top:340; left:5; visibility:hidden; width:100"><img SRC="contact_main.gif" BORDER=0 ></div>
+
+<div ID="contacttext" STYLE="position:absolute; 
+ top:375; left:30; visibility:hidden; width:100"><img SRC="contact_text.gif" BORDER=0 ></div>
+
+<center><!-- END DHTML CODING --></center>
+
+</body>
+</html>

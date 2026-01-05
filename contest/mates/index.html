@@ -1,0 +1,402 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Jan Herbert">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en]C-{C-UDP; EBM-Fujitsu1}  (Win98; U) [Netscape]">
+   <title>Match the Mate Game</title>
+<script>
+function alertSetFocus (object, message) {
+        alert (message);
+        object.focus();
+        object.select();
+        return false;
+}
+
+function check_empty(textfield, req, msg) {
+        if (!req) {
+                return true;
+        } else {
+            alertSetFocus(textfield, msg);
+            return false;
+        }
+}  
+
+function white_space(cc)
+{
+	return (cc == ' ' || cc == '\n' || cc == '\t');
+}
+
+function illegal_chars(cc)
+{
+	legal = ((cc >= 'a' && cc <= 'z') ||
+		 (cc >= 'A' && cc <= 'Z') ||
+		 (cc >= '0' && cc <= '9') ||
+		 cc == '!' || cc == '$' || cc == "-" ||
+		 cc == '@' || cc == '*' || cc == ":" ||
+		 cc == ";" || cc == ',' || cc == "." ||
+		 cc == "?" || cc == "/" || cc == "_" ||
+		 cc == " " || cc == "\n" || cc == "\r" ||
+		 cc == "'");
+	if (legal) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function illegal_name_chars(cc)
+{
+	legal = ((cc >= 'a' && cc <= 'z') ||
+		 (cc >= 'A' && cc <= 'Z') ||
+		 (cc >= '0' && cc <= '9') ||
+		 cc == "." ||
+		 cc == " ");
+	if (legal) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function check_chars(textfield, msgname)
+{
+	string = textfield.value;
+	for (var i = 0; i < string.length; i++) {
+		if (illegal_chars(string.charAt(i))) {
+			msg = "I'm sorry, " +
+				msgname +
+				" cannot contain the \'" +
+				string.charAt(i) +
+				"\' character.";
+			alertSetFocus(textfield, msg);
+			return false;
+		}
+	}
+	return (true);
+}
+		
+function check_name_chars(textfield, msgname)
+{
+	string = textfield.value;
+	for (var i = 0; i < string.length; i++) {
+		if (illegal_name_chars(string.charAt(i))) {
+			msg = "I'm sorry, " +
+				msgname +
+				" cannot contain the \'" +
+				string.charAt(i) +
+				"\' character.";
+			alertSetFocus(textfield, msg);
+			return false;
+		}
+	}
+	return (true);
+}
+
+function dump_ws(string)
+{
+	var ns, i, saw_char;
+
+	ns = ""
+	saw_char = false;
+	i = 0;
+
+	while (i < string.length) {
+		while (white_space(string.charAt(i)) && i < string.length) {
+			i++;
+		}
+		if (i < string.length) {
+			if (saw_char) {
+				ns += " ";
+			}
+			saw_char = true;
+			while (!white_space(string.charAt(i)) &&
+							i < string.length) {
+				ns = ns + string.charAt(i);
+				i++;
+			}
+		}
+	}
+	return (ns);
+}
+		
+function valid_text_nowsp(textfield, name, req)
+{
+	if (req && textfield.value == "") {
+		return check_empty(textfield, req, "I\'m sorry, " +
+			name + " must be set.");
+	}
+	return check_chars(textfield, name);
+}
+
+function valid_text(textfield, name, req)
+{
+	textfield.value = dump_ws(textfield.value);
+	if (req && textfield.value == "") {
+		return check_empty(textfield, req, "I\'m sorry, " +
+		 name + " must be set.");
+	}
+	return check_chars(textfield, name);
+}
+
+function valid_name_text(textfield, name, req)
+{
+	textfield.value = dump_ws(textfield.value);
+	if (req && textfield.value == "") {
+		return check_empty(textfield, req, "I\'m sorry, " +
+		 name + " must be set.");
+	}
+	return check_name_chars(textfield, name);
+}
+
+function validateForm(form) {
+	if (!valid_name_text(form.userName, "user name", true))
+		return false;
+	if (!valid_text(form.email, "email", false))
+		return false;
+	return true;
+}
+</script>
+</head>
+<body>
+
+<center>
+<h1>
+Match the Mate</h1></center>
+
+<li>
+Use the pull down menus to make your pick of which mate goes with which
+spouse.</li>
+
+<li>
+You're only allowed one submission, so be sure about your answers before
+you hit "Submit!" Any susequent submissions will be ignored.</li>
+
+<li>
+You have until June1, 2003, to submit your answers.</li>
+
+<li>
+After you make your selections, fill in form at the bottom &amp; then click
+on "Submit!"</li>
+
+<li>
+If you have any questions, please send them to <a href="mailto:jan@herbertland.com">jan@herbertland.com</a>.</li>
+
+<li>
+Correct answers will be posted June 2, 2003.</li>
+
+<li>
+Good luck!</li>
+
+<br><form action="http://www.herbertland.com/cgi-bin/contest" onSubmit="return validateForm(this)" NAME="form1">
+<center><table BORDER=0 CELLSPACING=10 CELLPADDING=10 >
+<tr>
+<td>
+<h2>
+The Men...</h2>
+
+<center><table BORDER >
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate00.jpg">
+<br>He belongs to:
+<br><select NAME="babyA"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate1.jpg">
+<br>He belongs to:
+<br><select NAME="babyB"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate2.jpg">
+<br>He belongs to:
+<br><select NAME="babyC"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate01.jpg">
+<br>He belongs to:
+<br><select NAME="babyD"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate02.jpg">
+<br>He belongs to:
+<br><select NAME="babyE"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate03.jpg">
+<br>He belongs to:
+<br><select NAME="babyF"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate04.jpg">
+<br>He belongs to:
+<br><select NAME="babyG"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate05.jpg">
+<br>He belongs to:
+<br><select NAME="babyH"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate06.jpg">
+<br>He belongs to:
+<br><select NAME="babyI"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate07.jpg">
+<br>He belongs to:<br>
+<select NAME="babyJ"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;
+</center></select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate08.jpg">
+<br>He belongs to:<br>
+<select NAME="babyK"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;
+</center></select></td>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate09.jpg">
+<br>He belongs to:
+<br><select NAME="babyL"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center>
+</select></td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate13.jpg"><br>
+He belongs to:
+<br><select NAME="babyM"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&n bsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5> Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VA LUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<o ption 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>S helia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</center> </select></td>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate11.jpg">
+<br>He belongs to:<br>
+<select NAME="babyN"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;
+</center></select></td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/mate12.jpg">
+<br>He belongs to:<br>
+
+<select NAME="babyO"><option 1 VALUE=1>Carla&nbsp;<option 2 VALUE=2>Colleen&nbsp;<option 3 VALUE=3>Gabby&nbsp;<option 4 VALUE=4>Ginny&nbsp;<option 5 VALUE=5>Heathyr&nbsp;<option 6 VALUE=6>Jen&nbsp;<option 7 VALUE=7>Jenn&nbsp;<option 8 VALUE=8>Jetta&nbsp;<option 9 VALUE=9>Latoya&nbsp;<option 10 VALUE=10>Marci&nbsp;<option 11 VALUE=11>Sara&nbsp;<option 12 VALUE=12>Sarah&nbsp;<option 13 VALUE=13>Shelia&nbsp;<option 14 VALUE=14>Sherry&nbsp;<option 15 VALUE=15>Teresa&nbsp;</select></td>
+</tr>
+</table></center>
+</td>
+
+<td>
+<h2>
+The Women...</h2>
+
+<center><table BORDER >
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/carlasm.jpg">
+<br>Carla</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/colleensm.jpg">
+<br>Colleen</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/gabbysm.jpg">
+<br>Gabby</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/ginnysm.jpg">
+<br>Ginny</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/heathyrsm.jpg">
+<br>Heathyr&nbsp;</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/jensm.jpg">
+<br>Jen
+<br>(MommytoEthan&amp;Taylor)</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/jennsm.jpg">
+<br>Jenn
+<br>(KiernansMommy)</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/jettasm.jpg">
+<br>Jetta&nbsp;</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/toyasm.jpg">
+<br>Latoya&nbsp;</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/marcism.jpg">
+<br>Marci&nbsp;</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/sarasm.jpg">
+<br>Sara&nbsp;</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/sarahsm.jpg">
+<br>Sarah&nbsp;</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/sheliasm.jpg">
+<br>Shelia</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/sherrysm.jpg">
+<br>Sherry&nbsp;</center>
+</td>
+
+<td>
+<center><img SRC="http://www.herbertland.com/contest/mates/teresasm.jpg">
+<br>Teresa</center>
+</td>
+</tr>
+</table></center>
+</td>
+</tr>
+</table></center>
+
+<p>User Name:&nbsp;<input name=userName type=text onChange='valid_name_text(this, "user name", 1)' maxlength=30>
+<br>Email Address (for participants):&nbsp;<input name=email type=text onChange='valid_text(this, "email", 0)' maxlength=100>
+<br><input TYPE="submit" VALUE="Submit"></form>
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

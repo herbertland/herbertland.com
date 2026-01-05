@@ -1,0 +1,20 @@
+- To see your published show double click on the index.html file.
+
+- To publish your show online you will need a web site and a way 
+of getting these files to your web site.
+
+- You can also easily share your show online by choosing the 
+"E-mail a Link" option in the share screen of PhotoShow Deluxe.
+
+- When you upload your Show to your website, index.html will be 
+the file that you link to in order to allow people to see your show.
+
+- After you upload your show, make sure that all the folders and files get 
+uploaded in the same configuration as on your computer.
+
+- If your FTP client does not support drag and drop, make sure to name all 
+the folders in the exact same way as they are on your computer. The folder 
+names on the server must have the exact same spelling and capitalization as on 
+your computer.
+
+- Have fun sharing your photos with PhotoShow Deluxe!

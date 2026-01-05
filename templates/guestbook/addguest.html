@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Add to our guestbook</title>
+  </head>
+    <center>
+      <h1>Add to our guestbook</h1>
+
+    Please fill in the blanks below to add to our guestbook.  Thanks!
+    </center>
+   <hr>
+ <form method=POST action="/cgi-bin/guestbook/guestbook.cgi">
+   <INPUT TYPE = "hidden" NAME = "setup_file" VALUE = "guestbook/guestbook.setup">
+   <table border="0">
+     <tr>
+      <td><p align=right>*Your Name:</p></td><td><p><input type=text name=realname size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>E-Mail:</p></td><td><p><input type=text name=username size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>URL:</p></td><td><p><input type=text name=url size=60><br></td>
+     </tr>
+     <tr>
+      <td><p align=right>City:</p></td><td><p><input type=text name=city size=60><br></td>  
+     <tr>
+      <td><p align=right>State:</p></td><td><p><input type=text name=state size=15><br> </td>
+     </tr>
+     <tr>
+       <td><p align=right>Country:</p></td><td><p><input type=text value=USA name=country size=15>        <br></td>
+     </tr>
+     <tr>
+      <td><p align=right>*Comments: </p></td><td><p> <textarea name=comments COLS=60 ROWS=4></textarea><br></td>
+     </tr>
+     <td></td><p>
+      <td>
+      <input type=submit value="Send comments"> <input type=reset value="Clear it"> <br></td>
+     </tr>
+    </table>
+    </form>
+    <hr>
+    * The required fields are comments and name.  <br>
+  </body>
+</html>

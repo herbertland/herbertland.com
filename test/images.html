@@ -1,0 +1,32 @@
+<HTML>
+<SCRIPT LANGUAGE="JavaScript">
+
+var width,height
+var image,ext
+var cond1,cond2
+function transferview(image,width,height) {
+        if (width==0) cond1=" "
+                else cond1="width="+(width+20)+"";
+        if (height==0) {cond2=" "
+                        scroll="yes"}
+                else {cond2="height="+(height+70)+""
+                      scroll="no"};
+
+        var s1 ="<TITLE>Image</TITLE>"
+        var s15=""
+        var s2 ="<CENTER><IMG SRC='"+image+"' BORDER=0>"
+        var s3 ="<FORM><INPUT TYPE='image' VALUE='Close Window'"+
+                " onClick='self.close()'>"
+        var s4 ="</FORM></CENTER></BODY>"
+
+        ImageWindow=window.open("", "newwin"+width,
+"toolbar=no,scrollbars="+scroll+",menubar=no,"+cond1+","+cond2);
+        ImageWindow.document.write(s1+s15+s2+s3+s4)
+        ImageWindow.document.close()
+}
+</SCRIPT>
+
+<FORM>
+<INPUT TYPE="image" SRC="http://www.herbertland.com/thumbnails/corvi-080.jpg" onClick="javascript:transferview('corvi-009.jpg')">
+</FORM>
+</HTML>

@@ -1,0 +1,56 @@
+<BODY BGCOLOR = "FFFFFF" TEXT = "000000">
+
+<HTML>
+<HEAD>
+<TITLE>Formulaire de commande</TITLE>
+</HEAD>
+
+<!--- The following three lines are required for order form--->
+<FORM ACTION = "/cgi-bin/form.cgi" METHOD = "POST">
+<INPUT TYPE = "hidden" NAME = "formtype" VALUE = "generic">
+<INPUT TYPE = "hidden" NAME = "setup_file" VALUE = "form/order_fr.setup">
+<!--- The above three lines are required for order form --->
+
+<BLOCKQUOTE>
+
+<HR>
+<H2>Exemple de formulaire de commande </H2>
+<H4>(Veuillez personnaliser)</H4>
+<HR>
+
+<UL></UL>
+
+<!--- The following inputs are user defined, variable prefix with '_' is mandatory to webmaster --->
+<TABLE BORDER = "0">
+
+<TR>
+<TH ALIGN = "right">Nom&nbsp;:</TH>
+<TD><INPUT TYPE = "text" NAME = "name" SIZE = "34" MAXLENGTH = "35"></TD>
+</TR>
+
+<TR>
+<TH ALIGN = "right">Téléphone&nbsp;:</TH>
+<TD><INPUT TYPE = "text" NAME = "phone" SIZE = "34" MAXLENGTH = "35"></TD>
+</TR>
+
+<TR>
+<TH ALIGN = "right">Adresse&nbsp;:</TH>
+<TD><INPUT TYPE = "text" NAME = "addr" SIZE = "34" MAXLENGTH = "35"></TD>
+</TR>
+
+<TR>
+<TH ALIGN = "right">*Adresse électronique&nbsp;:</TH>
+<TD><INPUT TYPE = "text" NAME = "email_" SIZE = "34" MAXLENGTH = "35"></TD>
+</TR>
+
+<TR>
+<TH ALIGN = "left"></TH>
+<TD>
+<INPUT TYPE = "submit" VALUE = "Submit this information.">
+<INPUT TYPE = "reset" VALUE = "Effacer">
+</TR>
+</TABLE>
+</BLOCKQUOTE>
+</FORM>
+</BODY>
+</HTML>

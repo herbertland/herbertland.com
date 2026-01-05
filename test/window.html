@@ -1,0 +1,22 @@
+<HTML>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function openindex()
+	{
+OpenWindow-window.open("","newwin",height=250,width=250,toolbar=no,scrollbars="+scroll+",menubar=no");
+OpenWindow.document.write("<TITLE>Title Goes Here</TITLE>")
+OpenWindow.document.write("<BODY BGCOLOR=pink>")
+OpenWindow.document.write("<h1>Hello!</h1>")
+OpenWindow.document.write("This text will appear in the window!")
+OpenWindow.document.write("</BODY>")
+OpenWindow.document.write("</HTML>")
+OpenWindow.document.close()
+self.name="main"
+	}
+</SCRIPT>
+
+<BODY onLoad="openindex()">
+This is a test
+</BODY>
+</HTML>
