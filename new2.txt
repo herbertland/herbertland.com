@@ -9,7 +9,7 @@
 <blockquote><font face="Times New Roman,Times"><font size=+3>New at Herbertland</font></font></blockquote>
 
 <blockquote>
-<blockquote><font face="Times New Roman,Times"><font size=+2><a href="index_tribute.html" TARGET="_parent">Tribute</a></font></font>
+<blockquote><font face="Times New Roman,Times"><font size=+2><a href="http://www.herbertland.com/index_tribute.html" TARGET="_parent">Tribute</a></font></font>
 <blockquote><font face="Times New Roman,Times"><font size=+1>A page dedicated to the victims of the attacks that took place on September 11, 2001.</font></font></blockquote>
 </blockquote>
 </blockquote>
