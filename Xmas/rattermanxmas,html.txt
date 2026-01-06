@@ -6,36 +6,36 @@
    <meta name="GENERATOR" content="Mozilla/4.61 [en] (Win95; I) [Netscape]">
    <title>Christmas, 1999</title>
 </head>
-<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="http://www.herbertland.com/backgrounds/xmastree2.jpg" nosave>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="backgrounds/xmastree2.jpg" nosave>
 
 <center><font color="#990000"><font size=+4>A Family Christmas</font></font>
-<p><img SRC="http://www.herbertland.com/pictures/christmas99/rattermans/collage.jpg" NOSAVE BORDER=0 usemap="#collage" height=400 width=533>
+<p><img src="pictures/christmas99/rattermans/collage.jpg" NOSAVE BORDER=0 usemap="#collage" height=400 width=533>
 <p><font color="#990000"><font size=+1>Click on a picture to see a larger
 image.</font></font></center>
 
 <p><br>
-<dl><img SRC="http://www.herbertland.com/thumbnails/holiday.jpg" NOSAVE height=21 width=30><a href="http://www.herbertland.com">Herbertland
+<dl><img src="thumbnails/holiday.jpg" NOSAVE height=21 width=30><a href="http://www.herbertland.com">Herbertland
 Homepage</a></dl>
 
 <map name="collage">
-<area shape="poly" alt="Mom and her new camcorder" coords="0,0,1,106,82,100,75,1,1,0" href="http://www.herbertland.com/Xmas/momcam.html" title="Mom and her new camcorder">
-<area shape="poly" alt="Making beautiful music" coords="77,0,85,114,260,105,254,1,79,1" href="http://www.herbertland.com/Xmas/music.html" title="Making beautiful music">
-<area shape="poly" alt="Random people" coords="255,0,262,107,237,111,406,143,432,0,256,1" href="http://www.herbertland.com/Xmas/richgirls.html" title="Random people">
-<area shape="poly" alt="Jessie sporting new clothes" coords="435,1,417,102,531,115,532,0,437,1" href="http://www.herbertland.com/Xmas/jessbag.html" title="Jessie sporting new clothes">
-<area shape="poly" alt="Nick and a box" coords="2,111,2,197,113,191,125,115,80,116,81,101,3,110" href="http://www.herbertland.com/Xmas/nickbox.html" title="Nick and a box">
-<area shape="poly" alt="Happy Kwanza" coords="127,115,118,189,130,189,131,227,242,227,247,190,259,198,257,116,223,109,128,116" href="http://www.herbertland.com/Xmas/kwanza.html" title="Happy Kwanza">
-<area shape="poly" alt="Flashing Nick" coords="262,117,262,199,330,212,320,126,262,117" href="http://www.herbertland.com/Xmas/nicklight.html" title="Flashing Nick">
-<area shape="poly" alt="Florida Avenue" coords="325,132,337,234,455,218,453,203,403,199,407,143,326,131" href="http://www.herbertland.com/Xmas/florida.html" title="Florida Avenue">
-<area shape="poly" alt="Jeff in his chair" coords="417,103,407,195,532,205,532,117,417,104" href="http://www.herbertland.com/Xmas/jeffchair.html" title="Jeff in his chair">
-<area shape="poly" alt="Cara and Barney" coords="1,198,1,309,132,303,127,192,1,198" href="http://www.herbertland.com/Xmas/barney.html" title="Cara and Barney">
-<area shape="poly" alt="Nick in a bag" coords="133,229,134,301,248,320,251,294,232,292,241,230,133,230" href="http://www.herbertland.com/Xmas/nickbag.html" title="Nick in a bag">
-<area shape="poly" alt="Rebecca and Jan" coords="248,197,236,288,353,309,363,233,334,237,331,215,249,198" href="http://www.herbertland.com/Xmas/rebjan.html" title="Rebecca and Jan">
-<area shape="poly" alt="There's a Scooby in that box!" coords="367,234,355,311,340,309,343,337,444,329,456,220,368,235" href="http://www.herbertland.com/Xmas/scooby.html" title="There's a Scooby in that box!">
-<area shape="poly" alt="Mom's tree" coords="459,201,447,328,531,333,531,207,460,203" href="http://www.herbertland.com/Xmas/tree.html" title="Mom's tree">
-<area shape="poly" alt="Beautiful Annette" coords="1,312,1,396,137,397,113,306,2,312" href="http://www.herbertland.com/Xmas/annette.html" title="Beautiful Annette">
-<area shape="poly" alt="Christmas chaos" coords="117,306,140,397,236,398,235,322,133,306,117,307" href="http://www.herbertland.com/Xmas/gifts.html" title="Christmas chaos">
-<area shape="poly" alt="Jessie in a box" coords="237,322,240,396,394,398,394,337,340,342,338,309,253,296,251,324,237,322" href="http://www.herbertland.com/Xmas/jessbox.html" title="Jessie in a box">
-<area shape="poly" alt="Tom opening a gift" coords="398,335,397,398,532,398,532,335,400,334" href="http://www.herbertland.com/Xmas/tom.html" title="Tom opening a gift">
+<area shape="poly" alt="Mom and her new camcorder" coords="0,0,1,106,82,100,75,1,1,0" href="Xmas/momcam.html" title="Mom and her new camcorder">
+<area shape="poly" alt="Making beautiful music" coords="77,0,85,114,260,105,254,1,79,1" href="Xmas/music.html" title="Making beautiful music">
+<area shape="poly" alt="Random people" coords="255,0,262,107,237,111,406,143,432,0,256,1" href="Xmas/richgirls.html" title="Random people">
+<area shape="poly" alt="Jessie sporting new clothes" coords="435,1,417,102,531,115,532,0,437,1" href="Xmas/jessbag.html" title="Jessie sporting new clothes">
+<area shape="poly" alt="Nick and a box" coords="2,111,2,197,113,191,125,115,80,116,81,101,3,110" href="Xmas/nickbox.html" title="Nick and a box">
+<area shape="poly" alt="Happy Kwanza" coords="127,115,118,189,130,189,131,227,242,227,247,190,259,198,257,116,223,109,128,116" href="Xmas/kwanza.html" title="Happy Kwanza">
+<area shape="poly" alt="Flashing Nick" coords="262,117,262,199,330,212,320,126,262,117" href="Xmas/nicklight.html" title="Flashing Nick">
+<area shape="poly" alt="Florida Avenue" coords="325,132,337,234,455,218,453,203,403,199,407,143,326,131" href="Xmas/florida.html" title="Florida Avenue">
+<area shape="poly" alt="Jeff in his chair" coords="417,103,407,195,532,205,532,117,417,104" href="Xmas/jeffchair.html" title="Jeff in his chair">
+<area shape="poly" alt="Cara and Barney" coords="1,198,1,309,132,303,127,192,1,198" href="Xmas/barney.html" title="Cara and Barney">
+<area shape="poly" alt="Nick in a bag" coords="133,229,134,301,248,320,251,294,232,292,241,230,133,230" href="Xmas/nickbag.html" title="Nick in a bag">
+<area shape="poly" alt="Rebecca and Jan" coords="248,197,236,288,353,309,363,233,334,237,331,215,249,198" href="Xmas/rebjan.html" title="Rebecca and Jan">
+<area shape="poly" alt="There's a Scooby in that box!" coords="367,234,355,311,340,309,343,337,444,329,456,220,368,235" href="Xmas/scooby.html" title="There's a Scooby in that box!">
+<area shape="poly" alt="Mom's tree" coords="459,201,447,328,531,333,531,207,460,203" href="Xmas/tree.html" title="Mom's tree">
+<area shape="poly" alt="Beautiful Annette" coords="1,312,1,396,137,397,113,306,2,312" href="Xmas/annette.html" title="Beautiful Annette">
+<area shape="poly" alt="Christmas chaos" coords="117,306,140,397,236,398,235,322,133,306,117,307" href="Xmas/gifts.html" title="Christmas chaos">
+<area shape="poly" alt="Jessie in a box" coords="237,322,240,396,394,398,394,337,340,342,338,309,253,296,251,324,237,322" href="Xmas/jessbox.html" title="Jessie in a box">
+<area shape="poly" alt="Tom opening a gift" coords="398,335,397,398,532,398,532,335,400,334" href="Xmas/tom.html" title="Tom opening a gift">
 <area shape="default" nohref>
 </map>
 </body>
