@@ -47,7 +47,7 @@ Comments or suggestions for this site may be sent to <A HREF="mailto:feedback@mc
 </CENTER>
 <br>
 <center>
-<a href="http://www.herbertland.com"><img src="http://www.herbertland.com/icons/menu/return_sign.gif" border=0></a>
+<a href="//www.herbertland.com"><img src="/icons/menu/return_sign.gif" border=0></a>
 </center>
 
 </body>
